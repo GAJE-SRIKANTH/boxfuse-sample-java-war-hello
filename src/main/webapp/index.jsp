@@ -55,25 +55,25 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to Rajinikanth Jenkins Final changes Master (Jenkins Class) - Poll-SCM deploy </h1>
+    <h1>Welcome to GAJE SRIKANTH PIPE LINE PROJECT (DEVOPS TRAINING) - Poll-SCM deploy </h1>
     <h2>Menu</h2>
 
     <div id="menu">
         <div class="menu-item" onclick="showSubItems('Biryani')">
             <img src="https://example.com/biryani.jpg" alt="Biryani">
-            Biryani
+            AWS COURSE
         </div>
         <div class="menu-item" onclick="showSubItems('Curries')">
             <img src="https://example.com/curries.jpg" alt="Curries">
-            Curries
+            DEVOPS COURSE
         </div>
         <div class="menu-item" onclick="showSubItems('Pizzas')">
             <img src="https://example.com/pizzas.jpg" alt="Pizzas">
-            Pizzas
+            JENKINS TOMCAT CI/CD PIPE LINE
         </div>
         <div class="menu-item" onclick="showSubItems('Starters')">
             <img src="https://example.com/starters.jpg" alt="Starters">
-            Starters
+            DOCKER AND KUBERNETES
         </div>
     </div>
 
@@ -82,10 +82,10 @@
     <script>
         function showSubItems(category) {
             var subItems = {
-                Biryani: ['Chicken Biryani', 'Mutton Biryani', 'Veg Biryani'],
-                Curries: ['Butter Chicken', 'Palak Paneer', 'Chana Masala'],
-                Pizzas: ['Margherita', 'Pepperoni', 'BBQ Chicken'],
-                Starters: ['Paneer Tikka', 'Chicken 65', 'Spring Rolls']
+                AWS COURSE: ['VPC pairing', 'RDLS', 'IAM User'],
+                DEVOPS: ['TOMCAT', 'MAVEN CYCLE', 'GIT HUB'],
+                JENKINS TOMCAT: ['Static Web Host', 'Pipeline Build', 'FreeStyle'],
+                KUBERNETES: ['Docker', 'Pods', 'Cluster']
             };
 
             var itemsList = subItems[category].map(function(item) {
