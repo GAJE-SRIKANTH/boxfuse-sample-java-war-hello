@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Rajinikanth Cloud DevOps Kitchen+1</title>
+    <title>GAJE SRIKANTH DEVOPS COURSE TRAINING</title>
     <style>
         body {
             text-align: center;
