@@ -1,46 +1,58 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.boxfuse.samples</groupId>
     <artifactId>hello</artifactId>
     <packaging>war</packaging>
-    <version>1.0</version>
+    <version>9.5.4</version>
     <name>hello</name>
     <url>https://github.com/boxfuse/boxfuse-sample-java-war-hello</url>
-         
-         
-         <properties>
-		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://13.234.232.175:9000/</sonar.host.url>
-		<java.version>11</java.version>
-                <maven.compiler.source>${java.version}</maven.compiler.source>
-                <maven.compiler.target>${java.version}</maven.compiler.target>
 
-	</properties>
+    <properties>
+        <docker.image.prefix>kammana</docker.image.prefix>
+        <sonar.host.url>http://52.66.204.59:9000/</sonar.host.url>
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <!-- Add any additional repositories here -->
+    </repositories>
+
     <dependencies>
+        <!-- Servlet API dependency -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
+            <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
-		<plugin>
-                  <groupId>org.codehaus.mojo</groupId>
-                  <artifactId>sonar-maven-plugin</artifactId>
-                  <version>3.0.2</version>
-                </plugin>
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.10.0.2594</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
+                <version>3.8.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
                 <configuration>
@@ -49,4 +61,16 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- Distribution Management for deploying artifacts -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexusRepo</id>
+            <url>http://13.232.45.92:8081/repository/sample-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexusRepo</id>
+            <url>http://13.232.45.92:8081/repository/sample-releases/</url>
+        </repository>
+    </distributionManagement>
 </project>
